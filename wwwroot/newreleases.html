@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aniplanet | New Releases</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <section class="top-header">
+            <a href="index.html"><img id="main-logo" src="assets/image/logo.png" alt="Logo"></a>
+            <section class="icon-container">
+                <span class="material-icons" id="account" title="Account">account_circle</span>
+                <span class="material-icons" id="view-switch-dark" title="Switch to Dark Mode">dark_mode</span>
+                <span class="material-icons" id="view-switch-light" title="Switch to Light Mode">light_mode</span>
+                <span class="material-icons" id="text-inc" title="Increase text size">text_increase</span>
+                <span class="material-icons" id="text-reset" title="Reset text size">font_download</span>
+                <span class="material-icons" id="text-dec" title="Decrease text size">text_decrease</span>
+            </section>
+        </section>
+        <section id="form-popup">
+            <form id="login-form-container">
+                <div id="login-form-exit">&#9932;</div>
+                <h1>Login</h1>
+                <label>Email: </label><br>
+                <input type="text" name="email" inputmode="email" title="Enter a valid email address" required><br><br>
+                <label>Password: </label><br>
+                <input type="text" name="pass" required><br>
+                <button type="submit" class="submit-button">Submit</button>
+                <p id="to-register">Not registered yet? Click here</p>
+            </form>
+            <form id="register-form-container">
+                <div id="register-form-exit">&#9932;</div>
+                <h1>Register</h1>
+                <label>First name: </label><br>
+                <input type="text" name="fname" pattern="[A-Za-z ]+" title="Use only uppercase and lowercase letters to write name." required><br><br>
+                <label>Last name: </label><br>
+                <input type="text" name="lname" pattern="[A-za-z ]+" title="Use only uppercase and lowercase letters to write name." required><br><br>
+                <label>Email: </label><br>
+                <input type="email" name="emailaddress" inputmode="email" title="Enter a valid email address" required><br><br>
+                <label>Password: </label><br>
+                <input type="text" name="pass" required><br>
+                <button type="submit" class="submit-button">Submit</button>
+                <p id="to-login">Login here</p>
+            </form>
+        </section>
+        <nav class="navbar" id="menu">
+            <p>MENU &#9776;</p>
+        </nav>
+        <nav class="navbar" id="main-nav">
+            <a href="index.html">HOME</a>
+            <a class="nav-active" href="newreleases.html">NEW RELEASE</a>
+            <a href="category.html">CATEGORIES</a>            
+        </nav>
+        <nav class="navbar" id="nav-small-screen">
+            <a href="index.html">HOME</a>
+            <a class="nav-active" href="newreleases.html">NEW RELEASE</a>
+            <a href="category.html">CATEGORIES</a>
+            <p id="nav-close">CLOSE &#9932;</p>          
+        </nav>
+    </header>
+
+    <h1 class="nrp-heading">New Releases</h1>
+    <article class="product-gallery">
+        <article class="item-container">
+            <a href="product-aerial.html"><img class="product-icon" src="assets/image/product/icon/aerial-rebuild.png"></a>
+            <a href="product-aerial.html"><p class="product-name-home">[PRE-ORDER] HG-TWFM 1/144 Gundam Aerial Rebuild</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-aerial.html"><img class="product-icon" src="assets/image/product/icon/god-gundam.png"></a>
+            <a href="product-aerial.html"><p class="product-name-home">RG 1/144 God Gundam</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-aerial.html"><img class="product-icon" src="assets/image/product/icon/beguir-pente.png"></a>
+            <a href="product-aerial.html"><p class="product-name-home">[PRE-ORDER] HG-TWFM 1/144 Beguir-Pente</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-aerial.html"><img class="product-icon" src="assets/image/product/icon/musha-ieyasu.png"></a>
+            <a href="product-aerial.html"><p class="product-name-home">[PRE-ORDER] MG 1/100 Musha Gundam Mk-II TOKUGAWA IEYASU Ver.</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-amiya.html"><img class="product-icon" src="assets/image/product/icon/yor.png"></a>
+            <a href="product-amiya.html"><p class="product-name-home">Nendoroid Yor Forger (SPY x FAMILY)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-shiroko.html"><img class="product-icon" src="assets/image/product/icon/edel.png"></a>
+            <a href="product-shiroko.html"><p class="product-name-home">POP UP PARADE Edelgard von Hresvelg (Fire Emblem: Three Houses)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-amiya.html"><img class="product-icon" src="assets/image/product/icon/saga.png"></a>
+            <a href="product-amiya.html"><p class="product-name-home">Nendoroid Saga (Arknights)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-shiroko.html"><img class="product-icon" src="assets/image/product/icon/kirigiri.png"></a>
+            <a href="product-shiroko.html"><p class="product-name-home">POP UP PARADE Kyoko Kirigiri (Danganronpa)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-exu.html"><img class="product-icon" src="assets/image/product/icon/surtr-magma.png"></a>
+            <a href="product-exu.html"><p class="product-name-home">1/7 Scale Figure Surtr: Magma Ver. (Arknights)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-exu.html"><img class="product-icon" src="assets/image/product/icon/figma-tohka.png"></a>
+            <a href="product-exu.html"><p class="product-name-home">figma Tohka Yatogami (Date A Live)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-exu.html"><img class="product-icon" src="assets/image/product/icon/exu-elite2.png"></a>
+            <a href="product-exu.html"><p class="product-name-home">1/7 Scale Figure Exusiai: Elite II (Arknights)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-shiroko.html"><img class="product-icon" src="assets/image/product/icon/figma-shiroko.png"></a>
+            <a href="product-shiroko.html"><p class="product-name-home">figma Shiroko Sunaookami (Blue Archive)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-amiya.html"><img class="product-icon" src="assets/image/product/icon/junko.png"></a>
+            <a href="product-amiya.html"><p class="product-name-home">Nendoroid Junko Enoshima (Danganronpa)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-amiya.html"><img class="product-icon" src="assets/image/product/icon/origami.png"></a>
+            <a href="product-amiya.html"><p class="product-name-home">Nendoroid Origami Tobiichi: Spirit Ver. (Date A Live)</p></a>
+        </article>
+        <article class="item-container">
+            <a href="product-exu.html"><img class="product-icon" src="assets/image/product/icon/ayanami.png"></a>
+            <a href="product-exu.html"><p class="product-name-home">POP UP PARADE Rei Ayanami: Long Hair Ver. (Evangelion)</p></a>
+        </article>
+    </article>
+
+    <footer>
+        <p>Website by Dustin Sumartlie (T0286006)</p>
+        <p>Nottingham Trent University 2022</p>
+    </footer>
+
+    <script src="script/switchView.js"></script>
+    <script src="script/forms.js"></script>
+    <script src="script/navSmall.js"></script>
+    <script src="script/fontSize.js"></script>
+</body>
+
+</html>

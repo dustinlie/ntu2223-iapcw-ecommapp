@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MGSD Freedom Gundam | Aniplanet</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <section class="top-header">
+            <a href="index.html"><img id="main-logo" src="assets/image/logo.png" alt="Logo"></a>
+            <section class="icon-container">
+                <span class="material-icons" id="account" title="Account">account_circle</span>
+                <span class="material-icons" id="view-switch-dark" title="Switch to Dark Mode">dark_mode</span>
+                <span class="material-icons" id="view-switch-light" title="Switch to Light Mode">light_mode</span>
+                <span class="material-icons" id="text-inc" title="Increase text size">text_increase</span>
+                <span class="material-icons" id="text-reset" title="Reset text size">font_download</span>
+                <span class="material-icons" id="text-dec" title="Decrease text size">text_decrease</span>
+            </section>
+        </section>
+        <section id="form-popup">
+            <form id="login-form-container">
+                <div id="login-form-exit">&#9932;</div>
+                <h1>Login</h1>
+                <label>Email: </label><br>
+                <input type="text" name="email" inputmode="email" title="Enter a valid email address" required><br><br>
+                <label>Password: </label><br>
+                <input type="text" name="pass" required><br>
+                <button type="submit" class="submit-button">Submit</button>
+                <p id="to-register">Not registered yet? Click here</p>
+            </form>
+            <form id="register-form-container">
+                <div id="register-form-exit">&#9932;</div>
+                <h1>Register</h1>
+                <label>First name: </label><br>
+                <input type="text" name="fname" pattern="[A-Za-z ]+" title="Use only uppercase and lowercase letters to write name." required><br><br>
+                <label>Last name: </label><br>
+                <input type="text" name="lname" pattern="[A-za-z ]+" title="Use only uppercase and lowercase letters to write name." required><br><br>
+                <label>Email: </label><br>
+                <input type="email" name="emailaddress" inputmode="email" title="Enter a valid email address" required><br><br>
+                <label>Password: </label><br>
+                <input type="text" name="pass" required><br>
+                <button type="submit" class="submit-button">Submit</button>
+                <p id="to-login">Login here</p>
+            </form>
+        </section>
+        <nav class="navbar" id="menu">
+            <p>MENU &#9776;</p>
+        </nav>
+        <nav class="navbar" id="main-nav">
+            <a href="index.html">HOME</a>
+            <a href="newreleases.html">NEW RELEASE</a>
+            <a href="category.html">CATEGORIES</a>            
+        </nav>
+        <nav class="navbar" id="nav-small-screen">
+            <a href="index.html">HOME</a>
+            <a href="newreleases.html">NEW RELEASE</a>
+            <a href="category.html">CATEGORIES</a>
+            <p id="nav-close">CLOSE &#9932;</p>          
+        </nav>
+    </header>
+
+    <article class="product-container-main">
+        <section class="pp-image-container">
+            <article class="pp-thumbnail-images">
+                <img id="pp-image" src="assets/image/product/product-pages/mgsd-freedom/mgsd-freedom-1.jpeg">
+            </article>
+            <article class="gallery-images">
+        </section>
+        <aside class="pp-product-info">
+            <h1>MGSD Freedom Gundam</h1>
+            <h1>£29.99</h1>
+            <p>The very first kit in the high-end SD brand "MGSD" lineup is the Freedom Gundam, packed with the most mobility, gimmicks, and details in the history of the SD series!</p>
+            <p>■ When built, the MGSD Freedom Gundam is approximately 115mm in height, with many parts of the internal frame equipped with movable gimmicks for smooth articulation.</p>
+            <p>■ Bandai's new "Real Metallic Gloss Injection" technology is used in various parts to achieve a metallic effect.</p>
+            <p>■ The head is movable on three axes. The internal structure allows for a variety of poses such as chin pulling and face protrusion. Multiple movable axes built into the torso allow for a wide range of left/right swinging, forward/backward tilting motion.</p>
+            <p>■ Knee armor and vernier behind the knees are interlocked when bending the legs to ensure a full range of motion. In addition, the movable toes allow for a natural kneeling position despite being an SD.</p>
+            <br>
+            <p>【Includes】</p>
+            <ul>
+                <li>Beam Rifle x 1</li>
+                <li>Beam Saber x 2</li>
+                <li>Beam Shield</li>
+                <li>Marking sticker sheet x 1</li>
+            </ul>
+        </aside>
+        <section class="yt-container">
+            <iframe class="pp-yt-embed" width="560" height="315" src="https://www.youtube.com/embed/FdV9Jt6l0Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </article>
+
+    <footer>
+        <p>Website by Dustin Sumartlie (T0286006)</p>
+        <p>Nottingham Trent University 2022</p>
+    </footer>
+
+    <script src="script/switchView.js"></script>
+    <script src="script/forms.js"></script>
+    <script src="script/navSmall.js"></script>
+    <script src="script/animateImg.js"></script>
+    <script src="script/fontSize.js"></script>
+</body>
+</html>
