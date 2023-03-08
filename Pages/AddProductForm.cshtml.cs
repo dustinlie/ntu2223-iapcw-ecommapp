@@ -11,8 +11,17 @@ namespace iapCoursework2.Pages
             _db = db;
         }
         public Product Product { get; set; }
-        public void OnGet()
+        public async Task<IActionResult> OnPostAsync()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _db.Products.Add(Product);
+            await _db.SaveChangesAsync();
+
+            return RedirectToPage("./Index");
         }
     }
 }
