@@ -1,0 +1,27 @@
+﻿@page
+@model iapCoursework2.Pages.AddProductFormModel
+@{
+}
+
+@using iapCoursework2.Models
+
+<form method="post">
+    <div>
+        <label for="Name">Name:</label>
+        <input asp-for="Product.Name">
+    </div>
+    <div>
+        <label for="Description">Description:</label>
+        <textarea asp-for="Product.Description"></textarea>
+    </div>
+    <div>
+        <label for="Price">Price:</label>
+        <input asp-for="Product.Price">
+    </div>
+    <div>
+        <label for="ProductImg">Product Image:</label>
+        <input asp-for="Product.ProductImg">
+    </div>
+    <button type="submit">Save</button>
+</form>
+
