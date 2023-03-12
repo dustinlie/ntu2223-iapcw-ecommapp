@@ -5,23 +5,29 @@
 
 @using iapCoursework2.Models
 
-<form method="post">
-    <div>
-        <label for="Name">Name:</label>
-        <input asp-for="Product.Name">
-    </div>
-    <div>
-        <label for="Description">Description:</label>
-        <textarea asp-for="Product.Description"></textarea>
-    </div>
-    <div>
-        <label for="Price">Price:</label>
-        <input asp-for="Product.Price">
-    </div>
-    <div>
-        <label for="ProductImg">Product Image:</label>
-        <input asp-for="Product.ProductImg">
-    </div>
-    <button type="submit">Save</button>
-</form>
-
+<article class="addform-container">
+    <h1>Add Products to Database</h1>
+    <form method="post">
+        <div>
+            <label for="Id">Product ID:</label>
+            <input type="text" asp-for="Product.Id">
+        </div>
+        <div>
+            <label for = "Name">Name:</label>
+            <input type = "text" asp-for = "Product.Name">
+        </div>
+        <div>
+            <label for = "Description">Description:</label>
+            <input type = "text" asp-for = "Product.Description">
+        </div>
+        <div>
+            <label for = "Price">Price:</label>
+            <input type = "text" asp-for = "Product.Price">
+        </div>
+        <div>
+            <label for = "ProductImg">Product Image:</label>
+            <input type = "text" asp-for="Product.ProductImg">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</article>

@@ -419,3 +419,11 @@ footer p {
         float: right;
     }
 } 
+
+/*Product Form*/
+.addform-container {
+    padding: 20px;
+    box-shadow: -1px -1px 15px 3px #e5e5e5;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}

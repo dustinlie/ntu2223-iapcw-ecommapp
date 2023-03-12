@@ -10,6 +10,7 @@ namespace iapCoursework2.Pages
         public AddProductFormModel(AppDataContext db) {
             _db = db;
         }
+        [BindProperty]
         public Product Product { get; set; }
         public async Task<IActionResult> OnPostAsync()
         {
@@ -20,8 +21,10 @@ namespace iapCoursework2.Pages
 
             _db.Products.Add(Product);
             await _db.SaveChangesAsync();
+            _db.Dispose();
 
             return RedirectToPage("./Index");
         }
     }
 }
+
