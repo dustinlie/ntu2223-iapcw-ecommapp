@@ -384,6 +384,14 @@ footer p {
     max-width: 100%;
 }
 
+/*Product Form*/
+.addform-container {
+    padding: 20px;
+    box-shadow: -1px -1px 15px 3px #e5e5e5;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
 @media only screen and (max-width: 600px) {
     .product-container-main {
         padding: 20px;
@@ -418,4 +426,12 @@ footer p {
         max-width: 100%;
         float: right;
     }
-} 
+}
+
+/*Product Form*/
+.form-container {
+    padding: 20px;
+    box-shadow: -1px -1px 15px 3px #e5e5e5;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
