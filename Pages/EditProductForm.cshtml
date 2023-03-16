@@ -1,16 +1,16 @@
 ﻿@page
-@model iapCoursework2.Pages.AddProductFormModel
+@model iapCoursework2.Pages.EditProductFormModel
 @{
 }
 
 @using iapCoursework2.Models
 
 <article class="form-container">
-    <h1>Add Products to Database</h1>
+    <h1>Edit Products in Database</h1>
     <form method="post">
         <div>
             <label for="Id">Product ID:</label>
-            <input type="text" asp-for="Product.Id">
+            <input type="text" asp-for="Product.Id" readonly>
         </div>
         <div>
             <label for = "Name">Name:</label>
@@ -25,16 +25,8 @@
             <input type = "text" asp-for = "Product.Price">
         </div>
         <div>
-            <label for="Category">Category:</label>
-            <input type="text" asp-for="Product.Category">
-        </div>
-        <div>
             <label for = "ProductImg">Product Image:</label>
             <input type = "text" asp-for="Product.ProductImg">
-        </div>
-        <div>
-            <label for="ProductIcon">Product Icon:</label>
-            <input type="text" asp-for="Product.ProductIcon">
         </div>
         <button type="submit">Save</button>
     </form>

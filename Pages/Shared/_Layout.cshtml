@@ -56,16 +56,16 @@
             @{
                 string activePage = ViewData["ActivePage"] as string ?? "";
             }
-            <a class="@((string)activePage == "home" ? "nav-active" : "")" href="index">HOME</a>
-            <a class="@((string)activePage == "newreleases" ? "nav-active" : "")" href="newreleases">NEW RELEASE</a>
+            <a class="@((string)activePage == "home" ? "nav-active" : "")" href="Index">HOME</a>
+            <a class="@((string)activePage == "product" ? "nav-active" : "")" href="Products">PRODUCTS</a>
             <a class="@((string)activePage == "categories" ? "nav-active" : "")" href="categories">CATEGORIES</a>
         </nav>
         <nav class="navbar" id="nav-small-screen">
             @{
                 string activePageNavSmall = ViewData["ActivePage"] as string ?? "";
             }
-            <a class="@((string)activePageNavSmall == "home" ? "nav-active" : "")" href="index">HOME</a>
-            <a class="@((string)activePageNavSmall == "newreleases" ? "nav-active" : "")" href="newreleases">NEW RELEASE</a>
+            <a class="@((string)activePageNavSmall == "home" ? "nav-active" : "")" href="Index">HOME</a>
+            <a class="@((string)activePageNavSmall == "newreleases" ? "nav-active" : "")" href="Product">PRODUCTS</a>
             <a class="@((string)activePageNavSmall == "categories" ? "nav-active" : "")" href="categories">CATEGORIES</a>
             <p id="nav-close">CLOSE &#9932;</p>
         </nav>

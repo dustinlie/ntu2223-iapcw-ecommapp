@@ -1,0 +1,22 @@
+﻿@page
+@model iapCoursework2.Pages.ProductsModel
+@{
+    ViewData["Title"] = "Aniplanet | Home";
+    ViewData["ActivePage"] = "product";
+}
+
+<h1 class="nrp-heading">Products</h1>
+<article class="product-gallery">
+    
+    @foreach (var product in Model.Products)
+    {
+        <article class="item-container">
+            <a href="product-aerial.html"><img class="product-icon" src="~/@product.ProductImg"></a>
+            <a href="product-aerial.html"><p class="product-name-home">@product.Name</p></a>
+            <p>£@product.Price</p>
+            <a asp-page="/EditProductForm" asp-route-id="@product.Id"><p>Edit</p></a>
+            <a asp-page="/Products" asp-route-id="@product.Id" asp-page-handler="Delete">Delete</a>
+        </article>
+    }
+    
+</article>
