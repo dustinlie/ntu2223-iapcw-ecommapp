@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @RenderSection("Scripts", required: false)
 </head>
 
 <body>
     <header class="main-header">
         <section class="top-header">
-            <a href="index.html"><img id="main-logo" src="assets/image/logo.png" alt="Logo"></a>
+            <a href="~/index"><img id="main-logo" src="~/assets/image/logo.png" alt="Logo"></a>
             <section class="icon-container">
                 <span class="material-icons" id="account" title="Account">account_circle</span>
                 <span class="material-icons" id="view-switch-dark" title="Switch to Dark Mode">dark_mode</span>
@@ -24,6 +25,7 @@
             </section>
         </section>
         <section id="form-popup">
+            <partial name="_LoginPartial" />
             <form id="login-form-container">
                 <div id="login-form-exit">&#9932;</div>
                 <h1>Login</h1>
@@ -79,7 +81,7 @@
         <p>Website by Dustin Sumartlie (T0286006)</p>
         <p>Nottingham Trent University 2022</p>
     </footer>
-
+    
     <script src="script/slideshowGallery.js"></script>
     <script src="script/switchView.js"></script>
     <script src="script/forms.js"></script>
