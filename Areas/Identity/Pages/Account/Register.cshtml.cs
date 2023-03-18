@@ -98,8 +98,13 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
-            public string FName { get; internal set; }
-            public string LName { get; internal set; }
+
+            [Required]
+            [Display(Name = "First Name")]
+            public string FName { get; set; }
+            [Required]
+            [Display(Name = "Last Name")]
+            public string LName { get; set; }
         }
 
 
@@ -118,11 +123,27 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
             {
                 var user = new AppUser
                 {
-                    UserName = Input.Email,
                     Email = Input.Email,
+                    Password = Input.Password,
                     FName = Input.FName,
                     LName = Input.LName
                 };
+
+                if (string.IsNullOrEmpty(Input.FName))
+                {
+                    ModelState.AddModelError(string.Empty, "Please provide a valid First Name");
+                    return Page();
+                }
+                if (string.IsNullOrEmpty(Input.LName))
+                {
+                    ModelState.AddModelError(string.Empty, "Please provide a valid Last Name");
+                    return Page();
+                }
+                if (string.IsNullOrEmpty(Input.Password))
+                {
+                    ModelState.AddModelError(string.Empty, "Please provide a password");
+                    return Page();
+                }
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
