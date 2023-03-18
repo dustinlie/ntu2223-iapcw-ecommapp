@@ -5,6 +5,7 @@ html, body {
     font-family: 'Alexandria', sans-serif;
 }
 
+
 .material-icons {
     font-size: 36px;
     color: #ffffff;
@@ -16,11 +17,13 @@ html, body {
     display: none;
 }
 
+
 /*Navbar*/
 .main-header {
     background-color: #003b6f;
     width: 100%;
 }
+
 
 .top-header {
     padding: 1vw;
@@ -34,6 +37,10 @@ html, body {
 
 #account {
     cursor: pointer;
+}
+
+.navbar-nav {
+    list-style: none;
 }
 
 .navbar {
@@ -84,9 +91,7 @@ html, body {
     cursor: pointer;
 }
 
-.navbar-nav {
-    list-style: none;
-}
+
 
 @media only screen and (max-width: 600px) {
     #main-logo {
