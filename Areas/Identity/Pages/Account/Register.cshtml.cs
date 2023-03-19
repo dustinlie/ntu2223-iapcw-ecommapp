@@ -29,12 +29,14 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
         private readonly IUserStore<AppUser> _userStore;
         private readonly IUserEmailStore<AppUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
             UserManager<AppUser> userManager,
             IUserStore<AppUser> userStore,
             SignInManager<AppUser> signInManager,
+            RoleManager<IdentityRole> roleManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -44,6 +46,7 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roleManager;
         }
 
         /// <summary>
@@ -107,6 +110,25 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
             public string LName { get; set; }
         }
 
+        public async Task CreateAsync(AppUser User)
+        {
+            var role = new IdentityRole();
+            if (!await _roleManager.RoleExistsAsync("Admin"))
+            {
+                role.Name = "Admin";
+                await _roleManager.CreateAsync(role);
+            }
+            if (!await _roleManager.RoleExistsAsync("Visitor"))
+            {
+                role.Name = "Visitor";
+                await _roleManager.CreateAsync(role);
+            }
+            var currentUser = await _userManager.FindByNameAsync(User.UserName);
+            if (currentUser != null && !await _userManager.IsInRoleAsync(currentUser, "Visitor"))
+            {
+                await _userManager.AddToRoleAsync(currentUser, "Visitor");
+            }
+        }
 
         public async Task OnGetAsync(string returnUrl = null)
         {
@@ -152,6 +174,8 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+                    await CreateAsync(user);
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
