@@ -105,9 +105,14 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
             [Required]
             [Display(Name = "First Name")]
             public string FName { get; set; }
+
             [Required]
             [Display(Name = "Last Name")]
             public string LName { get; set; }
+
+            [Required]
+            [Display(Name = "Username")]
+            public string UserName { get; set; }
         }
 
         public async Task CreateAsync(AppUser User)
@@ -148,7 +153,8 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
                     Email = Input.Email,
                     Password = Input.Password,
                     FName = Input.FName,
-                    LName = Input.LName
+                    LName = Input.LName,
+                    UserName = Input.UserName
                 };
 
                 if (string.IsNullOrEmpty(Input.FName))
@@ -166,8 +172,13 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, "Please provide a password");
                     return Page();
                 }
+                if (string.IsNullOrEmpty(Input.UserName))
+                {
+                    ModelState.AddModelError(string.Empty, "Please provide a username");
+                    return Page();
+                }
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 

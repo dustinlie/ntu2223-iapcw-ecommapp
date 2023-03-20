@@ -2,3 +2,26 @@
 @model iapCoursework2.Pages.ManageUserModel
 @{
 }
+
+<h1>Manage Users</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User Roles</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var role in Model.roles)
+        {
+            <tr>
+                <td>@role.Id</td>
+                <td>@role.Name</td>
+                <td>
+                    <a asp-page="/ManageUser" asp-route-id="@role.Id" asp-page-handler="Delete">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
