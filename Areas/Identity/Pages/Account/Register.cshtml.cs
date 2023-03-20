@@ -117,17 +117,17 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
 
         public async Task CreateAsync(AppUser User)
         {
-            var role = new IdentityRole();
             if (!await _roleManager.RoleExistsAsync("Admin"))
             {
-                role.Name = "Admin";
-                await _roleManager.CreateAsync(role);
+                var adminRole = new IdentityRole { Name = "Admin" };
+                await _roleManager.CreateAsync(adminRole);
             }
             if (!await _roleManager.RoleExistsAsync("Visitor"))
             {
-                role.Name = "Visitor";
-                await _roleManager.CreateAsync(role);
+                var visitorRole = new IdentityRole { Name = "Visitor" };
+                await _roleManager.CreateAsync(visitorRole);
             }
+
             var currentUser = await _userManager.FindByNameAsync(User.UserName);
             if (currentUser != null && !await _userManager.IsInRoleAsync(currentUser, "Visitor"))
             {
