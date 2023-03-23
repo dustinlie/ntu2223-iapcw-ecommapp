@@ -1,9 +1,11 @@
 using iapCoursework2.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace iapCoursework2.Pages
 {
+    //[Authorize(Roles = "Admin")]
     public class AddProductFormModel : PageModel
     {
         public readonly AppDataContext _db;
