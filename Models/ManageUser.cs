@@ -1,10 +1,10 @@
-﻿//using Microsoft.AspNetCore.Identity;
-//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.AspNetCore.Mvc.RazorPages;
-//using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
-//namespace iapCoursework2.Models
-//{
+namespace iapCoursework2.Models
+{
 //    public class ManageUserModel : PageModel
 //    {
 //        private readonly RoleManager<IdentityRole> _roleManager;
@@ -23,4 +23,4 @@
 //        }
 
 //    }
-//}
+}
