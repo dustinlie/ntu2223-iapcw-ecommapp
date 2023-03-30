@@ -6,7 +6,7 @@ using System.Data;
 
 namespace iapCoursework2.Pages
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class EditProductFormModel : PageModel
     {
         public readonly AppDataContext _db;
@@ -15,7 +15,7 @@ namespace iapCoursework2.Pages
             _db = db;
         }
         [BindProperty(SupportsGet = true)]
-        public string Id { get; set; }
+        public int Id { get; set; }
         [BindProperty]
         public Product Product { get; set; }
         public void OnGet()

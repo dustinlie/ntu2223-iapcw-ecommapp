@@ -1,0 +1,17 @@
+﻿@page
+@model iapCoursework2.Pages.AddCategoryFormModel
+@{
+}
+
+@using iapCoursework2.Models
+
+<article class="form-container">
+    <h1>Add Products to Database</h1>
+    <form method="post">
+        <div>
+            <label>Category Name:</label>
+            <input type="text" asp-for="Category.Name">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</article>

@@ -1,0 +1,37 @@
+﻿@page
+@model iapCoursework2.Pages.CartModel
+@{
+}
+
+<h1>Shopping Cart</h1>
+
+@if (Model.CartItems == null || Model.CartItems.Count == 0)
+{
+    <p>Your shopping cart is empty.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CartItems)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>£@item.Price</td>
+                    <td>@item.Quantity</td>
+                    <td>
+                        <a asp-page="/Cart" asp-route-id="@item.Id" asp-page-handler="Delete">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

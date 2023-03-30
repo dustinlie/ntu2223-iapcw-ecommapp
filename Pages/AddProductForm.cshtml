@@ -9,10 +9,6 @@
     <h1>Add Products to Database</h1>
     <form method="post">
         <div>
-            <label for="Id">Product ID:</label>
-            <input type="text" asp-for="Product.Id">
-        </div>
-        <div>
             <label for = "Name">Name:</label>
             <input type = "text" asp-for = "Product.Name">
         </div>
@@ -26,7 +22,9 @@
         </div>
         <div>
             <label for="Category">Category:</label>
-            <input type="text" asp-for="Product.Category">
+            <select asp-for="Product.Category.Id" asp-items="Model.Categories">
+                <option value="">Select a category</option>
+            </select>
         </div>
         <div>
             <label for = "ProductImg">Product Image:</label>

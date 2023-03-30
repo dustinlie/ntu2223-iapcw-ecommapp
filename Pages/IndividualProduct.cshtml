@@ -1,0 +1,27 @@
+﻿@page "{id:int}"
+@using iapCoursework2.Models;
+@model iapCoursework2.Pages.IndividualProductModel
+@{
+
+}
+
+
+<article class="product-container-main">
+    <section class="pp-image-container">
+        <article class="pp-thumbnail-images">
+            <img id="pp-image" src="~/@Model.Product.ProductImg">
+        </article>
+    </section>
+    <aside class="pp-product-info">
+        <h1>@Model.Product.Name</h1>
+        <h2>£@Model.Product.Price</h2>
+        <p>@Model.Product.Description</p>
+        <p>Category: <a asp-page="/CategoryProduct" asp-route-id="@Model.Product.Category.Id">@Model.CategoryName</a></p>
+        <form method="post">
+            <input type="hidden" name="id" value="@Model.Product.Id">
+            <input type="hidden" name="name" value="@Model.Product.Name">
+            <input type="hidden" name="price" value="@Model.Product.Price">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </aside>
+</article>

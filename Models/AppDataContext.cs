@@ -8,5 +8,6 @@ namespace iapCoursework2.Models
         public AppDataContext(DbContextOptions<AppDataContext> options) : base(options) { }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Cart> CartItems { get; set; }
     }
 }
