@@ -15,11 +15,8 @@
     <header class="main-header">
         <section class="top-header">
             <a href="~/Index"><img id="main-logo" src="~/assets/image/logo.png" alt="Logo"></a>
-            <form asp-page="/Search" method="get">
-                <input type="text" name="searchTerm" placeholder="Search">
-                <button type="submit">Search</button>
-            </form>
             <section class="icon-container">
+                <a href="Search"><span class="material-icons">search</span></a>
                 <a href="Cart"><span class="material-icons">shopping_cart</span></a>
                 <span class="material-icons" id="account" title="Account">account_circle</span>
                 <span class="material-icons" id="view-switch-dark" title="Switch to Dark Mode">dark_mode</span>
@@ -32,7 +29,7 @@
         <section id="form-popup">
             <div id="login-form-exit">&#9932;</div>
             <partial name="_LoginPartial" />
-            <p id="to-register">Not registered yet? Click here</p>
+            <p id="to-register"></p>
             <form id="register-form-container">
                 <div id="register-form-exit">&#9932;</div>
                 <h1>Register</h1>

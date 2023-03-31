@@ -129,9 +129,9 @@ namespace iapCoursework2.Areas.Identity.Pages.Account
             }
 
             var currentUser = await _userManager.FindByNameAsync(User.UserName);
-            if (currentUser != null && !await _userManager.IsInRoleAsync(currentUser, "Visitor"))
+            if (currentUser != null && !await _userManager.IsInRoleAsync(currentUser, "Admin"))
             {
-                await _userManager.AddToRoleAsync(currentUser, "Visitor");
+                await _userManager.AddToRoleAsync(currentUser, "Admin");
             }
         }
 
