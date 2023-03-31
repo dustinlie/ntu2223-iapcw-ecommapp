@@ -1,4 +1,7 @@
 ﻿@page
+@using Microsoft.AspNetCore.Identity
+@using iapCoursework2.Models;
+@inject UserManager<AppUser> UserManager
 @model iapCoursework2.Pages.IndexModel
 @{
     ViewData["Title"] = "Aniplanet | Home";
@@ -26,14 +29,11 @@
     </section>
     <br>
 
-    <a href="AddProductForm">FORM</a>
-    <br>
-    <a href="AddCategoryForm">CATEGORY FORM</a>
-    <br>
-    <a href="Cart">CART</a>
-    <br>
-    <a href="ManageUser">MANAGE USER</a>
-    <br> <br>
+@if (User.IsInRole("Admin"))
+{
+    <a href="Dashboard"><h2>Admin Dashboard</h2></a>
+}
+
     <a class="gallery-more" href="#">Gundam Fest &#10095;</a> <br>
     <article class="product-gallery">
         <article class="item-container">
