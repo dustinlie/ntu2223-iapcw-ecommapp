@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace iapCoursework2.Pages
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class AddProductFormModel : PageModel
     {
         public readonly AppDataContext _db;

@@ -6,7 +6,7 @@ using System.Data;
 
 namespace iapCoursework2.Pages
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class EditProductFormModel : PageModel
     {
         public readonly AppDataContext _db;

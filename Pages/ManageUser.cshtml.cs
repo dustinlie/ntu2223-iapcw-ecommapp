@@ -1,11 +1,14 @@
 using iapCoursework2.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace iapCoursework2.Pages
 {
+    [Authorize(Roles = "Admin")]
     public class ManageUserModel : PageModel
     {
         private readonly RoleManager<IdentityRole> _roleManager;
