@@ -14,8 +14,11 @@
             <a asp-page="/IndividualProduct" asp-route-id="@product.Id"><img class="product-icon" src="@product.ProductIcon"></a>
             <a asp-page="/IndividualProduct" asp-route-id="@product.Id"><p class="product-name-home">@product.Name</p></a>
             <p>£@product.Price</p>
-            <a asp-page="/EditProductForm" asp-route-id="@product.Id"><p>Edit</p></a>
-            <a asp-page="/Products" asp-route-id="@product.Id" asp-page-handler="Delete">Delete</a>
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-page="/EditProductForm" asp-route-id="@product.Id"><p>Edit</p></a>
+                <a asp-page="/Products" asp-route-id="@product.Id" asp-page-handler="Delete">Delete</a>
+            }
         </article>
     }
     
