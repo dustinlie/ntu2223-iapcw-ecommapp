@@ -23,7 +23,7 @@ namespace iapCoursework2.Pages
             return Page();
         }
 
-        public async Task<IActionResult> OnPostDeleteAsync(int id)
+        public async Task<IActionResult> OnGetDeleteAsync(int id)
         {
             var cartItem = await _db.CartItems.FindAsync(id);
 
