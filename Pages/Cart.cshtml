@@ -33,6 +33,10 @@ else
                     </td>
                 </tr>
             }
+                <tr>
+                    <td colspan="3" align="right"><strong>Total Price:</strong></td>
+                    <td><strong>£@Model.CartItems.Sum(item => item.Price * item.Quantity)</strong></td>
+                </tr>
         </tbody>
     </table>
 }
